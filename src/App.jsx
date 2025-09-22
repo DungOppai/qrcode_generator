@@ -226,7 +226,6 @@ export default function App() {
         color: '#888',
         textAlign: 'center'
       }}>
-        <div>Built with React + html5-qrcode + qrcode.react</div>
       </footer>
     </div>
   </div>
