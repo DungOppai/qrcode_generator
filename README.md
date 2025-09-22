@@ -1,54 +1,38 @@
-# QR Code Generator & Scanner — React (Vite)
-- Tạo QR code từ text hoặc link.
-- Lưu lịch sử QR code đã tạo (localStorage).
-- Quét QR code bằng camera (camera permission required).
-- Hỗ trợ offline: cache assets + app shell bằng Service Worker.
+# 📱 QR Code Generator & Scanner (React + Vite + PWA)
 
+Ứng dụng web cho phép **tạo mã QR** từ text/link và **quét mã QR** bằng camera.  
+Xây dựng bằng **React + Vite**, hỗ trợ **offline (Service Worker)** và có thể **cài đặt như ứng dụng di động (PWA)**.
 
-## Tech stack
-- React (Vite)
-- `qrcode.react` để generate QR code
-- `html5-qrcode` để scan từ camera
-- Service Worker để cache (manual simple caching)
+---
 
+## 🚀 Tính năng
+- ✅ Tạo QR Code từ văn bản hoặc đường dẫn  
+- ✅ Quét QR Code bằng camera  
+- ✅ Hỗ trợ offline nhờ Service Worker  
+- ✅ Cài đặt trên thiết bị di động (PWA)  
+- ✅ Lưu dữ liệu cơ bản bằng localStorage  
 
-## Cài đặt & chạy
-1. Cài node 16+ và npm/yarn.
-2. Tạo project, copy mã nguồn trong repo này.
-3. Cài dependencies:
+---
 
+## 🛠️ Công nghệ
+- React 18 + Vite  
+- react-qr-code  
+- html5-qrcode  
+- PWA (manifest.json + service-worker.js)  
 
-```bash
-npm install
-# or
-# yarn
-```
+---
 
+## ⚡ Cách dùng
+1. Tải file `.zip` của project về máy  
+2. Giải nén file `.zip`  
+3. Mở thư mục bằng **Visual Studio Code**  
+4. Trong terminal chạy:  
+   ```bash
+   npm install
+   npm run dev
+5. Mở http://localhost:5173
 
-4. Chạy dev:
-
-
-```bash
-npm run dev
-```
-
-
-5. Build & serve production (static):
-
-
-```bash
-npm run build
-npm run preview
-```
-
-
-> Lưu ý: để test tính năng scan camera, mở trang trong HTTPS hoặc `localhost`.
-
-
-## Offline & PWA
-- Service worker đơn giản cache các file tĩnh và trả về cache khi offline.
-- Để đóng gói thành PWA hoàn chỉnh, bạn có thể thêm manifest, icon và logic update service worker (workbox).
-
-
-## Lưu trữ dữ liệu
-- Ứng dụng lưu lịch sử QR code (text + timestamp) vào `localStorage`.
+## 📱 Hỗ trợ Offline (PWA)
+- service-worker.js tự động cache file tĩnh (HTML, CSS, JS, icon, manifest.json)
+- Có thể mở lại khi offline sau lần tải đầu tiên
+- Trên di động có thể Add to Home Screen để chạy như app native
