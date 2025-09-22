@@ -1,0 +1,9 @@
+{
+  "name": "QR Code Generator & Scanner",
+  "short_name": "QR App",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b74de",
+  "icons": []
+}
